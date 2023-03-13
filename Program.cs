@@ -3,10 +3,10 @@
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 Console.Write("Введите длинну массива = ");
 int length = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальное значение = ");
-int max = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите минимальное значение = ");
 int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальное значение = ");
+int max = Convert.ToInt32(Console.ReadLine());
 double[] CreateRandomArrayRndDouble(int length)
 {
     double[] array = new double[length];
@@ -53,6 +53,6 @@ double MaxArray(double[] array)
     }
     return maxArrey;
 }
-double diffminmax = MaxArray(array) - MinArray(array);
+double diffminmax = Math.Round (MaxArray(array) - MinArray(array), 1);
 PrintArrayDouble(array);
 Console.WriteLine($" Разница между максимальным и минимальным элементом в массиве = {diffminmax}");
